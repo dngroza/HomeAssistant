@@ -1,3 +1,9 @@
 deps/*
 icloud/*
 old_git/*
+.storage/*
+lovelace_migrate.py
+ui-lovelace.yaml
+.ios.conf
+home-assistant.log
+
