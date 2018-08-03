@@ -74,14 +74,14 @@
          message: "Bad air-quality --> {{ states.sensor.sn1_ldr.state }} <--"
 
 #Autoamtion for backup HA. Start at 1 minute after midnight 
-- alias: 'backup automation'
-  trigger:
-    platform: time
-    hours: 0
-    minutes: 1
-    seconds: 0
-  action:
-    service: shell_command.backupha
+#- alias: 'backup automation'
+#  trigger:
+#    platform: time
+#    hours: 0
+#    minutes: 1
+#    seconds: 0
+#  action:
+#    service: shell_command.backupha
 
 - alias: "Garden irrigation"
   trigger:
