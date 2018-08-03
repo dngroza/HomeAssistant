@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pip-delete-this-directory.txt
+requirements-test.txt
+setup.cfg
+setup.py
+jsonrpc_websocket/__init__.py
+jsonrpc_websocket/jsonrpc.py
+jsonrpc_websocket.egg-info/PKG-INFO
+jsonrpc_websocket.egg-info/SOURCES.txt
+jsonrpc_websocket.egg-info/dependency_links.txt
+jsonrpc_websocket.egg-info/requires.txt
+jsonrpc_websocket.egg-info/top_level.txt

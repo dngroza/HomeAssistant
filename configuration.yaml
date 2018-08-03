@@ -1,0 +1,212 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: 45.8833
+  longitude: 22.9
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 196
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Bucharest
+  customize: !include customize.yaml
+  whitelist_external_dirs:
+    - /var/lib/mysql
+
+# Show links to resources in log and frontend
+#introduction:
+
+#Shell command for backup
+shell_command:
+  backupha: /home/ha/scripts/backup.sh
+
+# Enables the frontend
+frontend:
+  javascript_version: es5
+#media
+media_player:
+  - platform: kodi
+    host: 192.168.1.9
+
+datadog:
+
+mqtt:
+
+#history_graph:
+#  my_graph:
+#    entities: [sensor.sn1_humidity]
+#    name: Cool Graph
+#    hours_to_show: 24
+#    refresh: 60
+      
+light:
+  - platform: mqtt_json
+    name: "SN1 LED"
+    state_topic: "bruh/sensornode1"
+    command_topic: "bruh/sensornode1/set"
+    brightness: true
+    flash: true
+    rgb: true
+    optimistic: false
+    qos: 0
+
+#  - platform: yr
+
+#  - platform: template
+#    sensors:
+#      battery_iphone:
+#        unit_of_measurement: '%'
+#        value_template: >-
+#            {%- if states.device_tracker.iphone.attributes.battery %}
+#                {{ states.device_tracker.iphone.attributes.battery|round }}
+#            {% else %}
+#                {{ states.sensor.battery_iphone.state }}
+#            {%- endif %}
+
+switch:
+  - platform: rpi_gpio
+#    initial_state: True
+    ports:
+      17: Bec
+
+  - platform: mqtt
+    name: "Lampa bec"
+    state_topic: "bruh/sensornode12"
+    command_topic: "bruh/sensornode12/set"
+
+  - platform: mqtt
+    name: "MQTT Switch 1"
+    state_topic: "/house/switchConfirm1/"
+    command_topic: "/house/switch1/"
+    payload_on: "1"
+    payload_off: "0"
+    qos: 0
+    retain: true
+
+  - platform: mqtt
+    name: "MQTT Switch 2"
+    state_topic: "/house/switchConfirm2/"
+    command_topic: "/house/switch2/"
+    payload_on: "1"
+    payload_off: "0"
+    qos: 0
+    retain: true
+
+  - platform: mqtt
+    name: "MQTT Switch 3"
+    state_topic: "/house/switchConfirm3/"
+    command_topic: "/house/switch3/"
+    payload_on: "1"
+    payload_off: "0"
+    qos: 0
+    retain: true
+
+  - platform: mqtt
+    name: "MQTT Switch 4"
+    state_topic: "/house/switchConfirm4/"
+    command_topic: "/house/switch4/"
+    payload_on: "1"
+    payload_off: "0"
+    qos: 0
+    retain: true
+
+  - platform: mqtt
+    name: "Soil moisture switch"
+    state_topic: "/house/switchConfirm44/"
+    command_topic: "/house/switch44/"
+    payload_on: "1"
+    payload_off: "0"
+    qos: 0
+    retain: true
+
+
+# Enables configuration UI
+config:
+
+http:
+  # Uncomment this to add a password (recommended!)
+   api_password: PiHome
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+#  keep_days: 10
+
+recorder:
+  db_url: mysql://hass:PiHome@localhost/homeassistant?charset=utf8
+  exclude:
+    entities:
+      - sensor.thermalsensor
+      - sun.sun
+      - updater.updater
+      - zone.home
+      - zone.work
+      - switch.mqtt_switch_1
+      - switch.mqtt_switch_2
+      - switch.mqtt_switch_3
+      - switch.mqtt_switch_4
+      - sensor.sn1_temperature23
+      - media_player.kodi
+      - light.sn1_led
+
+
+  purge_interval: 1
+  purge_keep_days: 7
+
+# View all events in a logbook
+logbook:
+ios:
+
+# Track the sun
+sun:
+
+# Weather prediction
+#sensor:
+#  - platform: yr
+
+# Text to speech
+tts:
+  - platform: google
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+sensor: !include sensor.yaml
+
+zone:
+  name: Home
+  latitude: 45.738165
+  longitude: 21.239225
+  radius: 180
+  icon: mdi:account-multiple
+  track_ios: true
+
+zone 2:
+  name: Work
+  latitude: 45.7289194
+  longitude: 21.2332648
+  radius: 180
+  icon: mdi:work
+  track_ios: true
+
+device_tracker:
+#   - platform: icloud
+#     username: dngroza@gmail.com
+#     password: 

@@ -1,0 +1,3 @@
+[console_scripts]
+i2csense = i2csense.__main__:main_cli
+

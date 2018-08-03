@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pip-delete-this-directory.txt
+requirements-test.txt
+setup.cfg
+setup.py
+jsonrpc_base/__init__.py
+jsonrpc_base/jsonrpc.py
+jsonrpc_base.egg-info/PKG-INFO
+jsonrpc_base.egg-info/SOURCES.txt
+jsonrpc_base.egg-info/dependency_links.txt
+jsonrpc_base.egg-info/top_level.txt

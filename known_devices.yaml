@@ -1,0 +1,33 @@
+#devicename:
+#  name: Dani
+#  mac: 5c:ad:cf:0e:30:d7
+#  picture: https://home-assistant.io/images/favicon-192x192.png
+#  track: yes
+#  hide_if_away: no
+#
+#ipad:
+#  hide_if_away: false
+#  icon:
+#  mac:
+#  name: iPad
+#  picture:
+#  track: true
+#  vendor:
+#
+#iphone:
+#  hide_if_away: false
+#  icon:
+#  mac:
+#  name: iPhone
+#  picture:
+#  track: true
+#  vendor:
+
+dani:
+  hide_if_away: false
+  icon:
+  mac:
+  name: dani
+  picture:
+  track: true
+  vendor:

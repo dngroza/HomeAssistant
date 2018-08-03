@@ -1,0 +1,102 @@
+[34m
+* Installing apt-transport-https
+[0m
+Hit http://mirrordirector.raspbian.org jessie InRelease
+Hit http://archive.raspberrypi.org jessie InRelease
+Get:1 https://apt.datadoghq.com stable InRelease [313 B]
+Ign https://apt.datadoghq.com stable InRelease
+Hit https://apt.datadoghq.com stable Release.gpg
+Hit https://apt.datadoghq.com stable Release
+Get:2 https://apt.datadoghq.com stable/6 armhf Packages [20 B]
+Hit http://archive.raspberrypi.org jessie/main armhf Packages
+Get:3 https://apt.datadoghq.com stable/6 Translation-en_GB [313 B]
+Get:4 https://apt.datadoghq.com stable/6 Translation-en [313 B]
+Hit http://archive.raspberrypi.org jessie/ui armhf Packages
+Get:5 https://apt.datadoghq.com stable/6 Translation-en_GB [313 B]
+Get:6 https://apt.datadoghq.com stable/6 Translation-en [313 B]
+Get:7 https://apt.datadoghq.com stable/6 Translation-en_GB [313 B]
+Get:8 https://apt.datadoghq.com stable/6 Translation-en [313 B]
+Get:9 https://apt.datadoghq.com stable/6 Translation-en_GB [313 B]
+Get:10 https://apt.datadoghq.com stable/6 Translation-en [313 B]
+Get:11 https://apt.datadoghq.com stable/6 Translation-en_GB [313 B]
+Ign https://apt.datadoghq.com stable/6 Translation-en_GB
+Get:12 https://apt.datadoghq.com stable/6 Translation-en [313 B]
+Get:13 http://mirrordirector.raspbian.org jessie/main armhf Packages [9,537 kB]
+Ign https://apt.datadoghq.com stable/6 Translation-en
+Ign http://archive.raspberrypi.org jessie/main Translation-en_GB
+Ign http://archive.raspberrypi.org jessie/main Translation-en
+Ign http://archive.raspberrypi.org jessie/ui Translation-en_GB
+Ign http://archive.raspberrypi.org jessie/ui Translation-en
+Get:14 http://mirrordirector.raspbian.org jessie/contrib armhf Packages [43.3 kB]
+Get:15 http://mirrordirector.raspbian.org jessie/non-free armhf Packages [84.2 kB]
+Get:16 http://mirrordirector.raspbian.org jessie/rpi armhf Packages [1,356 B]
+Ign http://mirrordirector.raspbian.org jessie/contrib Translation-en_GB
+Ign http://mirrordirector.raspbian.org jessie/contrib Translation-en
+Ign http://mirrordirector.raspbian.org jessie/main Translation-en_GB
+Ign http://mirrordirector.raspbian.org jessie/main Translation-en
+Ign http://mirrordirector.raspbian.org jessie/non-free Translation-en_GB
+Ign http://mirrordirector.raspbian.org jessie/non-free Translation-en
+Ign http://mirrordirector.raspbian.org jessie/rpi Translation-en_GB
+Ign http://mirrordirector.raspbian.org jessie/rpi Translation-en
+Fetched 9,665 kB in 25s (384 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+apt-transport-https is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 27 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+dirmngr is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 27 not upgraded.
+[34m
+* Installing APT package sources for Datadog
+[0m
+Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --homedir /tmp/tmp.uImXIHiOlg --no-auto-check-trustdb --trust-model always --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 382E94DE
+gpg: requesting key 382E94DE from hkp server keyserver.ubuntu.com
+gpg: key 382E94DE: "Datadog, Inc <package@datadoghq.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+[34m
+* Installing the Datadog Agent package
+[0m
+Get:1 https://apt.datadoghq.com stable InRelease [313 B]
+Ign https://apt.datadoghq.com stable InRelease
+Hit https://apt.datadoghq.com stable Release.gpg
+Hit https://apt.datadoghq.com stable Release
+Hit https://apt.datadoghq.com stable/6 armhf Packages
+Get:2 https://apt.datadoghq.com stable/6 Translation-en_GB [313 B]
+Get:3 https://apt.datadoghq.com stable/6 Translation-en [313 B]
+Get:4 https://apt.datadoghq.com stable/6 Translation-en_GB [313 B]
+Get:5 https://apt.datadoghq.com stable/6 Translation-en [313 B]
+Get:6 https://apt.datadoghq.com stable/6 Translation-en_GB [313 B]
+Get:7 https://apt.datadoghq.com stable/6 Translation-en [313 B]
+Get:8 https://apt.datadoghq.com stable/6 Translation-en_GB [313 B]
+Get:9 https://apt.datadoghq.com stable/6 Translation-en [313 B]
+Get:10 https://apt.datadoghq.com stable/6 Translation-en_GB [313 B]
+Ign https://apt.datadoghq.com stable/6 Translation-en_GB
+Get:11 https://apt.datadoghq.com stable/6 Translation-en [313 B]
+Ign https://apt.datadoghq.com stable/6 Translation-en
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+E: Unable to locate package datadog-agent
+[31mERROR
+Failed to install the Datadog package, sometimes it may be
+due to another APT source failing. See the logs above to
+determine the cause.
+If the cause is unclear, please contact Datadog support.
+*****
+
+It looks like you hit an issue when trying to install the Agent.
+
+Troubleshooting and basic usage information for the Agent are available at:
+
+    https://docs.datadoghq.com/agent/basic_agent_usage/
+
+If you're still having problems, please send an email to support@datadoghq.com
+with the contents of ddagent-install.log and we'll do our very best to help you
+solve your problem.
+[0m

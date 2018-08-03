@@ -1,0 +1,48 @@
+   sensor.sn1_humidity:
+      icon: mdi:water-percent
+      friendly_name: humidity  
+   sensor.sn1_temperature:
+      icon: mdi:thermometer
+      friendly_name: Living
+   sensor.sn1_solar:
+      icon: mdi:thermometer
+      friendly_name: Balcon
+   sensor.sn1_ldr:
+      icon: mdi:brightness-7
+      friendly_name: Luminozitate
+   sensor.sn1_pir:
+      icon: mdi:security
+      friendly_name: Motion Living
+   light.sn1_led:
+      icon: mdi:led-outline
+      friendly_name: Led RGB
+   sensor.soil_moister:
+      icon: water-percent
+      friendly_name: Soil moisture
+
+   sensor.processor_use:
+      icon: mdi:speedometer
+   sensor.disk_use_percent:
+      icon: mdi:harddisk
+   sensor.memory_free:
+      icon: mdi:chart-donut
+   sensor.uptime:
+      icon: mdi:timer
+   sensor.since_last_boot:
+      icon: mdi:timer
+
+   switch.mqtt_switch_1:
+       friendly_name: Garden pump
+       icon: mdi:water-pump
+   switch.mqtt_switch_2:
+       friendly_name: Philips TV matu
+       icon: mdi:television-box
+
+
+
+#### Light ####
+   switch.bec:
+      icon: mdi:lightbulb
+      friendly_name: Lampa birou
+      restore_state:
+

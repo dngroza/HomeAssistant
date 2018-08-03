@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pip-delete-this-directory.txt
+requirements-test.txt
+setup.cfg
+setup.py
+jsonrpc_async/__init__.py
+jsonrpc_async/jsonrpc.py
+jsonrpc_async.egg-info/PKG-INFO
+jsonrpc_async.egg-info/SOURCES.txt
+jsonrpc_async.egg-info/dependency_links.txt
+jsonrpc_async.egg-info/requires.txt
+jsonrpc_async.egg-info/top_level.txt

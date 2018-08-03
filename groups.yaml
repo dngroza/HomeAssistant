@@ -1,0 +1,46 @@
+RPI_view:
+  name: RaspberryPi
+  view: yes
+  icon: mdi:desktop-classic
+  entities:
+    - group.system_view
+
+
+sensor_node_1_card:
+  name: Living
+  entities:
+    - sensor.sn1_temperature
+    - sensor.sn1_solar
+    - sensor.sn1_humidity
+    - sensor.sn1_ldr
+    - sensor.sn1_pir
+#    - light.sn1_led
+    - switch.bec
+    - sensor.thermalsensor
+
+system_view:
+  name: System
+  entities:
+    - sensor.processor_use
+    - sensor.disk_use_percent_
+    - sensor.memory_free
+    - sensor.uptime    
+
+garden_view:
+    name: Balcon
+    view: yes
+    entities:
+      - sensor.sn1_solar
+      - switch.mqtt_switch_2
+      - switch.mqtt_switch_3
+      - switch.mqtt_switch_4
+
+gpio_relays:
+    name: Garden
+    view: yes
+    entities:
+      - switch.mqtt_switch_1
+      - sensor.soil_moister
+      - automation.garden_irrigation
+      - automation.garden_irrigation_off
+      - switch.soil_moisture_switch 
