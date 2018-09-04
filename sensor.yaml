@@ -7,7 +7,7 @@
 - platform: mqtt
   state_topic: "bruh/sensornode1"
   name: "SN1 Solar"
-  unit_of_measurement: "째C"
+  unit_of_measurement: '캜'
   value_template: '{{ value_json.solartemp | round(1) }}'
   icon: mdi:thermometer-lines
 
@@ -37,19 +37,19 @@
 - platform: mqtt
   state_topic: "bruh/sensornode1"
   name: "SN1 Temperature"
-  unit_of_measurement: "째F"
+  unit_of_measurement: '캜'
   value_template: '{{ value_json.temperature | round(1) }}'
 
 - platform: mqtt
   state_topic: "bruh/sensornode12"
   name: "SN1 Temperature23"
-  unit_of_measurement: "째C"
+  unit_of_measurement: "캜"
   value_template: '{{ value_json.temp23 | round(1) }}'
 
 - platform: mqtt
   state_topic: "bruh/sensornode1"
   name: "SN1 Real Feel"
-  unit_of_measurement: "째F"
+  unit_of_measurement: "캜"
   value_template: '{{ value_json.heatIndex | round(1) }}'
 
 - platform: bh1750

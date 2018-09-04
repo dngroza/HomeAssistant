@@ -151,20 +151,13 @@ history:
 
 recorder:
   db_url: mysql://hass:PiHome@localhost/homeassistant?charset=utf8
-  exclude:
+  include:
     entities:
-      - sensor.thermalsensor
-      - sun.sun
-      - updater.updater
-      - zone.home
-      - zone.work
-      - switch.mqtt_switch_1
-      - switch.mqtt_switch_2
-      - switch.mqtt_switch_3
-      - switch.mqtt_switch_4
-      - sensor.sn1_temperature23
-      - media_player.kodi
+      - sensor.sn1_temperature
       - light.sn1_led
+      - sensor.sn1_humidity
+      - sensor.sn1_ldr
+      - sensor.sn1_pir
 
 
   purge_interval: 1
