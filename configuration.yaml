@@ -32,6 +32,7 @@ media_player:
 datadog:
 
 mqtt:
+  password: 'PiHome'
 
 #history_graph:
 #  my_graph:
