@@ -16,6 +16,7 @@
   name: "SN1 Humidity"
   unit_of_measurement: "%"
   value_template: '{{ value_json.humidity | round(1) }}'
+  qos: 1
 
 - platform: mqtt
   state_topic: "bruh/sensornode1"
@@ -23,6 +24,7 @@
   ##This sensor is not calibrated to actual LUX. Rather, this a map of the input voltage ranging from 0 - 1023.
   unit_of_measurement: "LUX"
   value_template: '{{ value_json.ldr }}'
+  qos: 1
 
 - platform: mqtt
   state_topic: "bruh/sensornode11"
@@ -39,7 +41,8 @@
   name: "SN1 Temperature"
   unit_of_measurement: '°C'
   value_template: '{{ ((value_json.temperature | int - 32) * 5 / 9) | round(1) }}'
-
+  qos: 1
+  
 - platform: mqtt
   state_topic: "bruh/sensornode12"
   name: "SN1 Temperature23"
@@ -51,6 +54,7 @@
   name: "SN1 Real Feel"
   unit_of_measurement: '°C'
   value_template: '{{ value_json.heatIndex | round(1) }}'
+  qos: 1
 
 - platform: bh1750
   name: Ambient light
