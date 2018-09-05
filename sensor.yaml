@@ -2,7 +2,7 @@
   name: "Soil Moister"
   state_topic: "/house/soil1/"
   unit_of_measurement: "%"
-  qos: 0
+  qos: 1
 
 - platform: mqtt
   state_topic: "bruh/sensornode1"
