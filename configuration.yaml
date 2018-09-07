@@ -35,7 +35,7 @@ mqtt:
   password: 'PiHome'
 
 history_graph:
-  my_graph:
+  graph:
     name: Monitoring
     entities:
       - sensor.sn1_humidity
