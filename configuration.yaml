@@ -34,12 +34,15 @@ datadog:
 mqtt:
   password: 'PiHome'
 
-#history_graph:
-#  my_graph:
-#    entities: [sensor.sn1_humidity]
-#    name: Cool Graph
-#    hours_to_show: 24
-#    refresh: 60
+history_graph:
+  my_graph:
+    name: Monitoring
+    entities:
+      - sensor.sn1_humidity
+      - sensor.sn1_temperature
+      - sensor.sn1_ldr
+    hours_to_show: 168
+    refresh: 60
       
 light:
   - platform: mqtt_json
