@@ -41,7 +41,7 @@ history_graph:
       - sensor.sn1_humidity
       - sensor.sn1_temperature
       - sensor.sn1_ldr
-    hours_to_show: 168
+    hours_to_show: 336
     refresh: 60
       
 light:
