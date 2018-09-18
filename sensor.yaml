@@ -53,7 +53,7 @@
   state_topic: "bruh/sensornode1"
   name: "SN1 Real Feel"
   unit_of_measurement: '°C'
-  value_template: '{{ value_json.heatIndex | round(1) }}'
+  value_template: '{{ ((value_json.heatIndex | int - 32) * 5 / 9)| round(1) }}'
   qos: 1
 
 - platform: bh1750
