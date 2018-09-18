@@ -187,16 +187,16 @@ sensor: !include sensor.yaml
 
 zone:
   name: Home
-  latitude: 45.738165
-  longitude: 21.239225
+  latitude: 44.449186
+  longitude: 25.979965
   radius: 180
   icon: mdi:account-multiple
   track_ios: true
 
 zone 2:
   name: Work
-  latitude: 45.7289194
-  longitude: 21.2332648
+  latitude: 44.433421
+  longitude: 25.986803
   radius: 180
   icon: mdi:work
   track_ios: true
