@@ -202,6 +202,6 @@ zone 2:
   track_ios: true
 
 device_tracker:
-#   - platform: icloud
+#   - platform: icloud 
 #     username: dngroza@gmail.com
 #     password: 
