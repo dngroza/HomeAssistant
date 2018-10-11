@@ -14,7 +14,7 @@ sensor_node_1_card:
     - sensor.sn1_humidity
     - sensor.sn1_ldr
     - sensor.sn1_pir
-#    - light.sn1_led
+#    - light.sn1_ledd
     - switch.bec
     - sensor.thermalsensor
 
