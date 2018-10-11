@@ -25,7 +25,8 @@ system_view:
     - sensor.disk_use_percent_
     - sensor.memory_free
     - sensor.uptime
-    - sensor.network_devices    
+    - sensor.network_devices
+    - sensor.logs    
 
 garden_view:
     name: Balcon
