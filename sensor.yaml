@@ -15,13 +15,13 @@
   state_topic: "bruh/sensornode1"
   name: "SN1 Humidity"
   unit_of_measurement: "%"
-#  value_template: '{{ value_json.humidity | round(1) }}'
-  value_template: >-
-      {%- if value_json.humidity|float >= 5 and value_json.humidity|float <= 100 -%}
-      {{ value_json.temperature | round(1) }}
-      {%- else -%}
-      nan
-      {%- endif -%}
+  value_template: '{{ value_json.humidity | round(1) }}'
+#  value_template: >-
+#      {%- if value_json.humidity|float >= 5 and value_json.humidity|float <= 100 -%}
+#      {{ value_json.temperature | round(1) }}
+#      {%- else -%}
+#      nan
+#      {%- endif -%}
   qos: 1
 
 - platform: mqtt
