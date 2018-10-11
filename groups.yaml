@@ -23,7 +23,7 @@ statistics_view:
   entities:
     - sensor.temp_statistics_mean
     - sensor.humidity_statistics_mean
-    - sensor.air_statistics_mean  
+    - sensor.airq_statistics_mean  
 
 system_view:
   name: System
