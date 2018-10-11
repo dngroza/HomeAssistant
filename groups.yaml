@@ -18,7 +18,7 @@ sensor_node_1_card:
     - switch.bec
     - sensor.thermalsensor
 
-system_view:
+statistics_view:
   name: Statistics
   entities:
     - sensor.temp_statistics_mean
