@@ -19,6 +19,13 @@ sensor_node_1_card:
     - sensor.thermalsensor
 
 system_view:
+  name: Statistics
+  entities:
+    - sensor.temp_statistics_mean
+    - sensor.humidity_statistics_mean
+    - sensor.air_statistics_mean  
+
+system_view:
   name: System
   entities:
     - sensor.processor_use
@@ -26,8 +33,8 @@ system_view:
     - sensor.memory_free
     - sensor.uptime
     - sensor.network_devices
-    - sensor.logs    
-
+    - sensor.logs  
+    
 garden_view:
     name: Balcon
     view: yes
