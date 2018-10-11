@@ -83,7 +83,17 @@
   name: Network devices
   command: "nmap -sP 192.168.1.* |grep 'Nmap scan' |awk '{ print substr($0, index($0,$5)) }'"
 
-- platform: command_line
-  name: Logs
-  command: "grep ERROR /home/homeassistant/.homeassistant/home-assistant.log"
+- platform: statistics
+  name: Temp_statistics
+  entity_id: sensor.sn1_temperature
 
+- platform: statistics
+  name: Humidity_statistics
+  entity_id: sensor.sn1_humidity
+  
+- platform: statistics
+  name: AirQ_statistics
+  entity_id: sensor.sn1_ldr
+  
+  
+  
