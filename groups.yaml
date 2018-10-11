@@ -20,6 +20,7 @@ sensor_node_1_card:
 
 statistics_view:
   name: Statistics
+  view: yes
   entities:
     - sensor.temp_statistics_mean
     - sensor.humidity_statistics_mean
