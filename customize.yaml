@@ -19,7 +19,14 @@
    sensor.soil_moister:
       icon: water-percent
       friendly_name: Soil moisture
-
+   sensor.temp_statistics_mean:
+      icon: mdi:thermometer
+      friendly_name: Temp average
+   sensor.humidity_statistics_mean:
+      icon: mdi:water-percent
+      friendly_name: Hum average
+   
+   
    sensor.processor_use:
       icon: mdi:speedometer
    sensor.disk_use_percent:
