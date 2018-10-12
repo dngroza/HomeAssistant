@@ -32,20 +32,20 @@
       seconds: 20
 
 #Notify if wather pomp is on by itself
--  alias: Notify Dani when wather pump is opened
-   trigger:
-     - platform: state
-       entity_id: switch.mqtt_switch_1
-       from: 'off'
-       to: 'on'
-     - platform: state
-       entity_id: switch.mqtt_switch_2
-       from: 'off'
-       to: 'on'
-   action:
-     - service: notify.ios_dani
-       data:
-         message: Wather pump ON 
+#-  alias: Notify Dani when wather pump is opened
+#   trigger:
+#     - platform: state
+#       entity_id: switch.mqtt_switch_1
+#       from: 'off'
+#       to: 'on'
+#     - platform: state
+#       entity_id: switch.mqtt_switch_2
+#       from: 'off'
+#       to: 'on'
+#   action:
+#     - service: notify.ios_dani
+#       data:
+#         message: Wather pump ON 
 #         data:
 #           push:
 #             sound: "US-EN-Daisy-Water-Heater-Leak.wav"
