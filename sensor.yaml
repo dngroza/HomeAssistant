@@ -100,9 +100,9 @@
   name: Temp_statistics
   entity_id: sensor.sn1_temperature
 
-#- platform: statistics
-#  name: Humidity_statistics
-#  entity_id: sensor.sn1_humidity
+- platform: statistics
+  name: Humidity_statistics
+  entity_id: sensor.sn1_humidity
   
   
   
