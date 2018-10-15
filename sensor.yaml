@@ -104,5 +104,7 @@
   name: Humidity_statistics
   entity_id: sensor.sn1_humidity
   
-  
+- platform: statistics
+  name: AirQ_statistics
+  entity_id: sensor.sn1_ldr  
   

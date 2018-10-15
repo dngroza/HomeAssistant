@@ -25,6 +25,9 @@
    sensor.humidity_statistics_mean:
       icon: mdi:water-percent
       friendly_name: Hum average
+   sensor.qirq_statistic_mean:
+      icon: mdi:water-percent
+      friendly_name: AirQ averag
    
    
    sensor.processor_use:
