@@ -9,7 +9,7 @@
       friendly_name: Balcon
    sensor.sn1_ldr:
       icon: mdi:brightness-7
-      friendly_name: Luminozitate
+      friendly_name: AirQuality
    sensor.sn1_pir:
       icon: mdi:security
       friendly_name: Motion Living
