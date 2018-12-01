@@ -39,6 +39,7 @@ history_graph:
       - sensor.sn1_humidity
       - sensor.sn1_temperature
       - sensor.sn1_ldr
+      - sensor.sn1_solar
     hours_to_show: 336
     refresh: 60
       
@@ -160,6 +161,7 @@ recorder:
       - sensor.sn1_humidity
       - sensor.sn1_ldr
       - sensor.sn1_pir
+      - sensor.sn1_solar
 
 
   purge_interval: 1
