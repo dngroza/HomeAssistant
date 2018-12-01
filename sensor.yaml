@@ -56,7 +56,7 @@
   state_topic: "bruh/sensornode1"
   name: "SN1 Temperature"
   unit_of_measurement: '°C'
-#  value_template: '{{ ((value_json.temperature | int - 32) * 5 / 9) | round(1) }}'
+#  value_template: '{{ ((value_json.temperature | int - 32) * 5 / 9) | round(1) }}' 
   value_template: >-
       {% if value_json.temperature|float >= 5 and value_json.temperature|float <= 100 %}
       {{ ((value_json.temperature | int - 32) * 5 / 9) | round(1) }}
