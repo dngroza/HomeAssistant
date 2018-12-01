@@ -8,7 +8,12 @@
   state_topic: "bruh/sensornode1"
   name: "SN1 Solar"
   unit_of_measurement: '°C'
-  value_template: '{{ value_json.solartemp | round(1) }}'
+  value_template: >-
+      {% if value_json.solartemp|float >= 5 and value_json.solartemp|float <= 100 %}
+      {{ value_json.solartemp | round(1) }}
+      {% else %}
+         ??
+      {% endif %}
   icon: mdi:thermometer-lines
 
 - platform: mqtt
@@ -27,7 +32,7 @@
   state_topic: "bruh/sensornode1"
   name: "SN1 LDR"
   ##This sensor is not calibrated to actual LUX. Rather, this a map of the input voltage ranging from 0 - 1023 .
-  unit_of_measurement: "LUX"
+  unit_of_measurement: "AirQ"
 #  value_template: '{{ value_json.ldr }}'
   value_template: >-
       {% if value_json.ldr|float >= 5 and value_json.ldr|float <= 1000 %}
@@ -51,7 +56,7 @@
   state_topic: "bruh/sensornode1"
   name: "SN1 Temperature"
   unit_of_measurement: '°C'
-#  value_template: '{{ ((value_json.temperature | int - 32) * 5 / 9) | round(1) }}'
+#  value_template: '{{ ((value_json.temperature | int - 32) * 5 / 9) | round(1) }}' 
   value_template: >-
       {% if value_json.temperature|float >= 5 and value_json.temperature|float <= 100 %}
       {{ ((value_json.temperature | int - 32) * 5 / 9) | round(1) }}
@@ -64,7 +69,12 @@
   state_topic: "bruh/sensornode12"
   name: "SN1 Temperature23"
   unit_of_measurement: '°C'
-  value_template: '{{ value_json.temp23 | round(1) }}'
+  value_template: >-
+      {% if value_json.temp23|float >= 5 and value_json.temp23|float <= 100 %}
+      {{ ((value_json.temp23 | int - 32) * 5 / 9) | round(1) }}
+      {% else %}
+         ??
+      {% endif %}
 
 - platform: mqtt
   state_topic: "bruh/sensornode1"
@@ -104,5 +114,7 @@
   name: Humidity_statistics
   entity_id: sensor.sn1_humidity
   
-  
+- platform: statistics
+  name: AirQ_statistics
+  entity_id: sensor.sn1_ldr  
   

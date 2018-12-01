@@ -9,7 +9,7 @@
       friendly_name: Balcon
    sensor.sn1_ldr:
       icon: mdi:brightness-7
-      friendly_name: Luminozitate
+      friendly_name: AirQuality
    sensor.sn1_pir:
       icon: mdi:security
       friendly_name: Motion Living
@@ -25,6 +25,9 @@
    sensor.humidity_statistics_mean:
       icon: mdi:water-percent
       friendly_name: Hum average
+   sensor.qirq_statistic_mean:
+      icon: mdi:water-percent
+      friendly_name: AirQ averag
    
    
    sensor.processor_use:
