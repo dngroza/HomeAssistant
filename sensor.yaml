@@ -9,10 +9,10 @@
   name: "SN1 Solar"
   unit_of_measurement: '°C'
   value_template: >-
-      {% if value_json.solartemp|float >= -50 and value_json.solartemp|float <= 100 %}
-      {{ value_json.solartemp | round(1) }}
-      {% else %}
+      {% if value_json.solartemp|float == 0.0 or value_json.solartemp|float >= -100 or value_json.solartemp == 'unknown' %}
          ??
+      {% else %}
+      {{ value_json.solartemp | round(1) }}
       {% endif %}
   icon: mdi:thermometer-lines
 
