@@ -10,12 +10,17 @@
   unit_of_measurement: '°C'
   value_template: >-
 <<<<<<< HEAD
+<<<<<<< HEAD
       {% if value_json.solartemp|float == 0.0 or value_json.solartemp|float >= -100 or value_json.solartemp == 'unknown' %}
          ??
 =======
       {% if value_json.solartemp|float == 0.0 %}  # or value_json.solartemp|float >= -100 or value_json.solartemp == 'unknown' %}
          nan
 >>>>>>> be4f8d79f22833c9b4aaea1bf99fc26ca8afd40f
+=======
+      {% if value_json.solartemp|float == 0.0 or value_json.solartemp|float >= -100 or value_json.solartemp == 'unknown' %}
+         ??
+>>>>>>> 6dbcd0b3d105f5b9ac2150888f732661847b769d
       {% else %}
       {{ value_json.solartemp | round(1) }}
       {% endif %}
