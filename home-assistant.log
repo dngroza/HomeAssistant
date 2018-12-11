@@ -1,21 +1,4 @@
-2018-08-09 10:29:58 WARNING (MainThread) [homeassistant.setup] Setup of mqtt is taking over 10 seconds.
-2018-08-09 10:29:58 WARNING (MainThread) [homeassistant.setup] Setup of recorder is taking over 10 seconds.
-2018-08-09 10:30:05 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.5/asyncio/tasks.py", line 239, in _step
-    result = coro.send(None)
-  File "/usr/local/lib/python3.5/site-packages/homeassistant/helpers/entity_platform.py", line 318, in _async_add_entity
-    msg)
-homeassistant.exceptions.HomeAssistantError: Entity id already exists: automation.notify_dani_when_wather_pump_is_opened
-2018-08-09 10:30:08 ERROR (Thread-4) [homeassistant.components.sensor.bh1750] Bad writing in bus: 121
-2018-08-09 10:30:08 ERROR (Thread-4) [homeassistant.components.sensor.bh1750] Bad writing in bus: 121
-2018-08-09 10:30:08 ERROR (Thread-4) [homeassistant.components.sensor.bh1750] Bad writing in bus: 121
-2018-08-09 10:30:08 ERROR (Thread-4) [homeassistant.components.sensor.bh1750] Bad writing in bus: 121
-2018-08-09 10:30:08 ERROR (Thread-4) [homeassistant.components.sensor.bh1750] Bad writing in bus: 121
-2018-08-09 10:30:09 ERROR (Thread-4) [homeassistant.components.sensor.bh1750] Bad writing in bus: 121
-2018-08-09 10:30:09 ERROR (Thread-4) [homeassistant.components.sensor.bh1750] Bad writing in bus: 121
-2018-08-09 10:30:09 ERROR (Thread-4) [homeassistant.components.sensor.bh1750] Bad writing in bus: 121
-2018-08-09 10:30:09 ERROR (Thread-4) [homeassistant.components.sensor.bh1750] Bad reading in bus: 121
-2018-08-09 10:30:09 ERROR (Thread-4) [homeassistant.components.sensor.bh1750] Bad writing in bus: 121
-2018-08-09 10:30:09 ERROR (MainThread) [homeassistant.components.sensor.bh1750] BH1750 sensor not detected at 0x23
-2018-08-09 10:30:26 WARNING (Thread-12) [netdisco.ssdp] Error fetching description at http://192.168.1.1:1990/WFADevice.xml
+2018-12-11 16:44:13 WARNING (MainThread) [homeassistant.components.http] legacy_api_password support has been enabled. If you don't require it, remove the 'api_password' from your http config.
+2018-12-11 16:44:41 WARNING (Thread-18) [netdisco.ssdp] Error fetching description at http://192.168.1.1:1990/WFADevice.xml
+2018-12-11 16:49:57 WARNING (Thread-5) [netdisco.ssdp] Found malformed XML at http://192.168.1.209:23165: 
+invalid request
