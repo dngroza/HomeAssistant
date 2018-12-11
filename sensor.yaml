@@ -9,8 +9,8 @@
   name: "SN1 Solar"
   unit_of_measurement: '°C'
   value_template: >-
-      {% if value_json.solartemp|float == 0.0 or value_json.solartemp|float >= -100 or value_json.solartemp == 'unknown' %}
-         ??
+      {% if value_json.solartemp|float == 0.0 %}  # or value_json.solartemp|float >= -100 or value_json.solartemp == 'unknown' %}
+         nan
       {% else %}
       {{ value_json.solartemp | round(1) }}
       {% endif %}
