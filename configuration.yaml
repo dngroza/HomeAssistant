@@ -29,7 +29,7 @@ climate:
     min_cycle_duration:
       minutes: 20
     initial_operation_mode: "auto"
-    target_temp: 23
+    #target_temp: 23
     away_temp: 20
     cold_tolerance: 0.5
     hot_tolerance: 0.5
@@ -43,7 +43,7 @@ climate:
     min_cycle_duration:
       minutes: 20
     initial_operation_mode: "auto"
-    target_temp: 23
+    #target_temp: 23
     away_temp: 20
     cold_tolerance: 0.5
     hot_tolerance: 0.5
@@ -57,7 +57,7 @@ climate:
     min_cycle_duration:
       minutes: 20
     initial_operation_mode: "auto"
-    target_temp: 23
+    #target_temp: 23
     away_temp: 20
     cold_tolerance: 0.5
     hot_tolerance: 0.5
@@ -85,7 +85,7 @@ climate:
     min_cycle_duration:
       minutes: 20
     initial_operation_mode: "auto"
-    target_temp: 23
+    #target_temp: 23
     away_temp: 20
     cold_tolerance: 0.5
     hot_tolerance: 0.5
