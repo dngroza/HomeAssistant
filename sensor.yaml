@@ -89,13 +89,6 @@
 #  measurement_delay_ms: 200
 #  scan_interval: 1
 
-- platform: systemmonitor
-  resources:
-    - type: disk_use_percent
-      arg: /
-    - type: memory_free
-    - type: processor_use
-    - type: since_last_boot
 
 #- platform: filesize
 #  name: DB size
@@ -117,4 +110,28 @@
 - platform: statistics
   name: AirQ_statistics
   entity_id: sensor.sn1_ldr  
+
   
+- platform: mqtt
+  state_topic: 'tele/therm/SENSOR'
+  name: 'TempC1'
+  unit_of_measurement: '°C'
+  value_template: "{{ value_json['AM2301-12'].Temperature }}"
+
+- platform: mqtt
+  state_topic: 'tele/therm/SENSOR'
+  name: 'HumidityC1'
+  unit_of_measurement: '°%'
+  value_template: "{{ value_json['AM2301-12'].Humidity }}"
+
+- platform: mqtt
+  state_topic: 'tele/therm/SENSOR'
+  name: 'TempC2'
+  unit_of_measurement: '°C'
+  value_template: "{{ value_json['SI7021-14'].Temperature }}"
+
+- platform: mqtt
+  state_topic: 'tele/therm/SENSOR'
+  name: 'HumidityC2'
+  unit_of_measurement: '°%'
+  value_template: "{{ value_json['SI7021-14'].Humidity }}"

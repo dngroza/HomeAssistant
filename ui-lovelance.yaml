@@ -1,0 +1,37 @@
+resources:
+  - url: /local/thermostat-card.js?v=2
+    type: module
+
+title: Adensville
+views:
+  - title: DORMITOR
+    icon: mdi:home-heart
+    panel: true 
+    cards:
+      - type: vertical-stack
+        cards:
+        - type: custom:plan-coordinates
+        - type: picture-elements
+          image: /local/plan.jpg
+          elements:
+            - type: custom:thermostat-card
+              entity: switch.releuc1
+              style:
+                left: 63%
+                top: 70%
+                width: 15%
+              ambient_temperature: sensor.tempc1
+              hightlight_tap: true
+              no_card: true
+            - type: custom:thermostat-card
+              entity: switch.releuc1
+              style:
+                left: 63%
+                top: 89%
+                width: 15%
+              ambient_temperature: sensor.tempc1
+              hightlight_tap: true
+              no_card: true
+      - type: picture-glance
+        title: Dormitor
+        image: /local/plan.jpg

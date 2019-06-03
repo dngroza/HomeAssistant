@@ -17,6 +17,80 @@ homeassistant:
 # Show links to resources in log and frontend
 #introduction:
 
+lovelace:
+
+climate:
+  - platform: generic_thermostat
+    name: Camera copii 1
+    heater: switch.releuc1
+    target_sensor: sensor.tempc1
+    min_temp: 16
+    max_temp: 28
+    min_cycle_duration:
+      minutes: 20
+    initial_operation_mode: "off"
+    target_temp: 23
+    away_temp: 20
+    cold_tolerance: 0.5
+    hot_tolerance: 0.5
+  
+  - platform: generic_thermostat
+    name: Camera copii 2
+    heater: switch.releuc1
+    target_sensor: sensor.tempc2
+    min_temp: 16
+    max_temp: 28
+    min_cycle_duration:
+      minutes: 20
+    initial_operation_mode: "off"
+    target_temp: 23
+    away_temp: 20
+    cold_tolerance: 0.5
+    hot_tolerance: 0.5
+
+  - platform: generic_thermostat
+    name: Dormitor
+    heater: switch.releuc1
+    target_sensor: sensor.tempc2
+    min_temp: 16
+    max_temp: 28
+    min_cycle_duration:
+      minutes: 20
+    initial_operation_mode: "off"
+    target_temp: 23
+    away_temp: 20
+    cold_tolerance: 0.5
+    hot_tolerance: 0.5
+
+  - platform: generic_thermostat
+    name: Birou
+    heater: switch.releuc1
+    target_sensor: sensor.tempc2
+    min_temp: 16
+    max_temp: 28
+    min_cycle_duration:
+      minutes: 20
+    initial_operation_mode: "off"
+    target_temp: 23
+    away_temp: 20
+    cold_tolerance: 0.5
+    hot_tolerance: 0.5
+
+  - platform: generic_thermostat
+    name: Living
+    heater: switch.releuc1
+    target_sensor: sensor.tempc2
+    min_temp: 16
+    max_temp: 28
+    min_cycle_duration:
+      minutes: 20
+    initial_operation_mode: "off"
+    target_temp: 23
+    away_temp: 20
+    cold_tolerance: 0.5
+    hot_tolerance: 0.5
+
+
 #Shell command for backup
 shell_command:
   backupha: /home/ha/scripts/backup.sh
@@ -36,24 +110,14 @@ history_graph:
   graph:
     name: Monitoring
     entities:
-      - sensor.sn1_humidity
-      - sensor.sn1_temperature
-      - sensor.sn1_ldr
-      - sensor.sn1_solar
+      - sensor.tempc2
+      - sensor.tempc1
+      - switch.releuc1
+      - sensor.humidityc1
+      - sensor.humidityc2
     hours_to_show: 336
     refresh: 60
       
-light:
-  - platform: mqtt_json
-    name: "SN1 LED"
-    state_topic: "bruh/sensornode1"
-    command_topic: "bruh/sensornode1/set"
-    brightness: true
-    flash: true
-    rgb: true
-    optimistic: false
-    qos: 0
-
 #  - platform: yr
 
 #  - platform: template
@@ -123,6 +187,33 @@ switch:
     qos: 0
     retain: true
 
+  - platform: mqtt
+    name: "Sonoff1"
+    state_topic: "stat/sonoff/POWER1"
+    command_topic: "cmnd/sonoff/power1"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1
+    retain: true
+
+  - platform: mqtt
+    name: "Sonoff2"
+    state_topic: "stat/sonoff/POWER2"
+    command_topic: "cmnd/sonoff/power2"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1
+    retain: true
+
+  - platform: mqtt
+    name: "ReleuC1"
+    state_topic: "stat/therm/POWER"
+    command_topic: "cmnd/therm/POWER"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1
+    retain: true
+
 
 # Enables configuration UI
 config:
@@ -153,7 +244,7 @@ history:
 #  keep_days: 10
 
 recorder:
-  db_url: mysql://hass:PiHome@localhost/homeassistant?charset=utf8
+#  db_url: mysql://hass:PiHome@localhost/homeassistant?charset=utf8
   include:
     entities:
       - sensor.sn1_temperature
